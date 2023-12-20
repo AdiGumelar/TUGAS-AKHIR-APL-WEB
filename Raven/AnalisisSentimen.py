@@ -12,7 +12,7 @@ from nltk.corpus import stopwords
 import seaborn as sns
 
 # Baca file CSV
-df = pd.read_csv('transportasiOnlineIndo1.csv')
+df = pd.read_csv('data.csv')
 df = df.drop_duplicates()
 # Fungsi untuk pra-pemrosesan teks
 def preprocess_text(text):
