@@ -20,6 +20,7 @@ df = pd.read_csv(file_path)
 df = df.drop_duplicates()
 
 nltk.download('punkt')
+nltk.download('stopwords')
 
 # Fungsi untuk pra-pemrosesan teks
 def preprocess_text(text):
