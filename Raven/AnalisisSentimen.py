@@ -10,9 +10,12 @@ from wordcloud import WordCloud
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import seaborn as sns
+import os
 
 # Baca file CSV
-df = pd.read_csv('data.csv')
+current_dir = os.path.dirname(__file__)
+file_path = os.path.join(current_dir, 'data.csv')
+df = pd.read_csv(file_path)
 df = df.drop_duplicates()
 # Fungsi untuk pra-pemrosesan teks
 def preprocess_text(text):
