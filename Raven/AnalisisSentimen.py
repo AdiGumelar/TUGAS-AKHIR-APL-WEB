@@ -7,6 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 from wordcloud import WordCloud
+import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import seaborn as sns
@@ -17,6 +18,9 @@ current_dir = os.path.dirname(__file__)
 file_path = os.path.join(current_dir, 'data.csv')
 df = pd.read_csv(file_path)
 df = df.drop_duplicates()
+
+nltk.download('punkt')
+
 # Fungsi untuk pra-pemrosesan teks
 def preprocess_text(text):
     # Menghapus URL
